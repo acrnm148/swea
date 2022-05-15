@@ -1,14 +1,15 @@
-#include <iostream>
+#include<iostream>
+
 using namespace std;
 
-int main(void)
+int main(int argc, char** argv)
 {
-	int idx = 1;
-	int T = 0;
+	int test_case;
+	int T;
+	cin >> T;
 	int sum = 0;
 	int arr[10];
-	scanf("%d", &T);
-	while (idx <= T)
+	for(test_case = 1; test_case <= T; ++test_case)
 	{
 		for (int i = 0; i < 10; i++)
 		{
@@ -16,8 +17,8 @@ int main(void)
 			if (arr[i] % 2 == 1)
 				sum += arr[i];
 		}
-		cout << "#" << idx << " " << sum << "\n";
+		cout << "#" << test_case << " " << sum << "\n";
 		sum = 0;
-		idx++;
 	}
+	return 0;
 }
